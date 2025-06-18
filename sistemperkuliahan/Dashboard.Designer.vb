@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Dashboard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,31 +22,33 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         Me.Sidebar = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnJadwal = New System.Windows.Forms.Button()
-        Me.btnMatakuliah = New System.Windows.Forms.Button()
-        Me.btnAbsen = New System.Windows.Forms.Button()
         Me.btnDashboard = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnAbsen = New System.Windows.Forms.Button()
+        Me.btnMatakuliah = New System.Windows.Forms.Button()
+        Me.btnJadwal = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Header = New System.Windows.Forms.Panel()
         Me.pnlDashboard = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.pnlAbsen = New System.Windows.Forms.Panel()
         Me.pnlMatakuliah = New System.Windows.Forms.Panel()
-        Me.pnlJadwal = New System.Windows.Forms.Panel()
-        Me.dgvJadwal = New System.Windows.Forms.DataGridView()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.dgvMatakuliah = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.dgvMatakuliah = New System.Windows.Forms.DataGridView()
+        Me.pnlJadwal = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.dgvJadwal = New System.Windows.Forms.DataGridView()
+        Me.btnLogout = New System.Windows.Forms.Button()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Header.SuspendLayout()
         Me.pnlMatakuliah.SuspendLayout()
+        CType(Me.dgvMatakuliah, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlJadwal.SuspendLayout()
         CType(Me.dgvJadwal, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvMatakuliah, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Sidebar
@@ -64,6 +66,22 @@ Partial Class Form1
         Me.Sidebar.Size = New System.Drawing.Size(194, 540)
         Me.Sidebar.TabIndex = 0
         '
+        'btnDashboard
+        '
+        Me.btnDashboard.FlatAppearance.BorderSize = 0
+        Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDashboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnDashboard.Image = CType(resources.GetObject("btnDashboard.Image"), System.Drawing.Image)
+        Me.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDashboard.Location = New System.Drawing.Point(3, 176)
+        Me.btnDashboard.Name = "btnDashboard"
+        Me.btnDashboard.Size = New System.Drawing.Size(191, 31)
+        Me.btnDashboard.TabIndex = 0
+        Me.btnDashboard.Text = "     Dashboard"
+        Me.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnDashboard.UseVisualStyleBackColor = True
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -74,30 +92,20 @@ Partial Class Form1
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "NID :"
         '
-        'PictureBox1
+        'btnAbsen
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(56, 35)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(75, 79)
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
-        '
-        'btnJadwal
-        '
-        Me.btnJadwal.FlatAppearance.BorderSize = 0
-        Me.btnJadwal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnJadwal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnJadwal.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnJadwal.Image = CType(resources.GetObject("btnJadwal.Image"), System.Drawing.Image)
-        Me.btnJadwal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnJadwal.Location = New System.Drawing.Point(3, 291)
-        Me.btnJadwal.Name = "btnJadwal"
-        Me.btnJadwal.Size = New System.Drawing.Size(188, 31)
-        Me.btnJadwal.TabIndex = 3
-        Me.btnJadwal.Text = "     Jadwal"
-        Me.btnJadwal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnJadwal.UseVisualStyleBackColor = True
+        Me.btnAbsen.FlatAppearance.BorderSize = 0
+        Me.btnAbsen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAbsen.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAbsen.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAbsen.Image = CType(resources.GetObject("btnAbsen.Image"), System.Drawing.Image)
+        Me.btnAbsen.Location = New System.Drawing.Point(1, 215)
+        Me.btnAbsen.Name = "btnAbsen"
+        Me.btnAbsen.Size = New System.Drawing.Size(193, 31)
+        Me.btnAbsen.TabIndex = 1
+        Me.btnAbsen.Text = "     Absen Mahasiswa"
+        Me.btnAbsen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnAbsen.UseVisualStyleBackColor = True
         '
         'btnMatakuliah
         '
@@ -115,40 +123,35 @@ Partial Class Form1
         Me.btnMatakuliah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnMatakuliah.UseVisualStyleBackColor = True
         '
-        'btnAbsen
+        'btnJadwal
         '
-        Me.btnAbsen.FlatAppearance.BorderSize = 0
-        Me.btnAbsen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAbsen.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAbsen.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAbsen.Image = CType(resources.GetObject("btnAbsen.Image"), System.Drawing.Image)
-        Me.btnAbsen.Location = New System.Drawing.Point(1, 215)
-        Me.btnAbsen.Name = "btnAbsen"
-        Me.btnAbsen.Size = New System.Drawing.Size(193, 31)
-        Me.btnAbsen.TabIndex = 1
-        Me.btnAbsen.Text = "     Absen Mahasiswa"
-        Me.btnAbsen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnAbsen.UseVisualStyleBackColor = True
+        Me.btnJadwal.FlatAppearance.BorderSize = 0
+        Me.btnJadwal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnJadwal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnJadwal.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnJadwal.Image = CType(resources.GetObject("btnJadwal.Image"), System.Drawing.Image)
+        Me.btnJadwal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnJadwal.Location = New System.Drawing.Point(3, 291)
+        Me.btnJadwal.Name = "btnJadwal"
+        Me.btnJadwal.Size = New System.Drawing.Size(188, 31)
+        Me.btnJadwal.TabIndex = 3
+        Me.btnJadwal.Text = "     Jadwal"
+        Me.btnJadwal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnJadwal.UseVisualStyleBackColor = True
         '
-        'btnDashboard
+        'PictureBox1
         '
-        Me.btnDashboard.FlatAppearance.BorderSize = 0
-        Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDashboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnDashboard.Image = CType(resources.GetObject("btnDashboard.Image"), System.Drawing.Image)
-        Me.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDashboard.Location = New System.Drawing.Point(3, 176)
-        Me.btnDashboard.Name = "btnDashboard"
-        Me.btnDashboard.Size = New System.Drawing.Size(191, 31)
-        Me.btnDashboard.TabIndex = 0
-        Me.btnDashboard.Text = "     Dashboard"
-        Me.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnDashboard.UseVisualStyleBackColor = True
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(56, 35)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(75, 79)
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
         '
         'Header
         '
         Me.Header.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.Header.Controls.Add(Me.btnLogout)
         Me.Header.Dock = System.Windows.Forms.DockStyle.Top
         Me.Header.Location = New System.Drawing.Point(194, 0)
         Me.Header.Name = "Header"
@@ -210,37 +213,16 @@ Partial Class Form1
         Me.pnlMatakuliah.Size = New System.Drawing.Size(766, 499)
         Me.pnlMatakuliah.TabIndex = 4
         '
-        'pnlJadwal
+        'Label3
         '
-        Me.pnlJadwal.Controls.Add(Me.Label2)
-        Me.pnlJadwal.Controls.Add(Me.dgvJadwal)
-        Me.pnlJadwal.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlJadwal.Location = New System.Drawing.Point(194, 41)
-        Me.pnlJadwal.Name = "pnlJadwal"
-        Me.pnlJadwal.Size = New System.Drawing.Size(766, 499)
-        Me.pnlJadwal.TabIndex = 5
-        '
-        'dgvJadwal
-        '
-        Me.dgvJadwal.AllowUserToAddRows = False
-        Me.dgvJadwal.AllowUserToDeleteRows = False
-        Me.dgvJadwal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvJadwal.Location = New System.Drawing.Point(24, 61)
-        Me.dgvJadwal.Name = "dgvJadwal"
-        Me.dgvJadwal.ReadOnly = True
-        Me.dgvJadwal.Size = New System.Drawing.Size(573, 319)
-        Me.dgvJadwal.TabIndex = 0
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label2.Location = New System.Drawing.Point(20, 25)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(183, 24)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "JADWAL DOSEN"
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Location = New System.Drawing.Point(20, 25)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(235, 24)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "MATAKULIAH DOSEN"
         '
         'dgvMatakuliah
         '
@@ -253,41 +235,72 @@ Partial Class Form1
         Me.dgvMatakuliah.Size = New System.Drawing.Size(573, 319)
         Me.dgvMatakuliah.TabIndex = 8
         '
-        'Label3
+        'pnlJadwal
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label3.Location = New System.Drawing.Point(20, 25)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(235, 24)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "MATAKULIAH DOSEN"
+        Me.pnlJadwal.Controls.Add(Me.Label2)
+        Me.pnlJadwal.Controls.Add(Me.dgvJadwal)
+        Me.pnlJadwal.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlJadwal.Location = New System.Drawing.Point(194, 41)
+        Me.pnlJadwal.Name = "pnlJadwal"
+        Me.pnlJadwal.Size = New System.Drawing.Size(766, 499)
+        Me.pnlJadwal.TabIndex = 5
         '
-        'Form1
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label2.Location = New System.Drawing.Point(20, 25)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(183, 24)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "JADWAL DOSEN"
+        '
+        'dgvJadwal
+        '
+        Me.dgvJadwal.AllowUserToAddRows = False
+        Me.dgvJadwal.AllowUserToDeleteRows = False
+        Me.dgvJadwal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvJadwal.Location = New System.Drawing.Point(24, 61)
+        Me.dgvJadwal.Name = "dgvJadwal"
+        Me.dgvJadwal.ReadOnly = True
+        Me.dgvJadwal.Size = New System.Drawing.Size(573, 319)
+        Me.dgvJadwal.TabIndex = 0
+        '
+        'btnLogout
+        '
+        Me.btnLogout.Location = New System.Drawing.Point(679, 12)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(75, 23)
+        Me.btnLogout.TabIndex = 0
+        Me.btnLogout.Text = "Logout"
+        Me.btnLogout.UseVisualStyleBackColor = True
+        '
+        'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(248, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(960, 540)
-        Me.Controls.Add(Me.pnlJadwal)
-        Me.Controls.Add(Me.pnlMatakuliah)
         Me.Controls.Add(Me.pnlDashboard)
         Me.Controls.Add(Me.pnlAbsen)
+        Me.Controls.Add(Me.pnlJadwal)
+        Me.Controls.Add(Me.pnlMatakuliah)
         Me.Controls.Add(Me.Header)
         Me.Controls.Add(Me.Sidebar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Form1"
+        Me.Name = "Dashboard"
         Me.Text = "Form1"
         Me.Sidebar.ResumeLayout(False)
         Me.Sidebar.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Header.ResumeLayout(False)
         Me.pnlMatakuliah.ResumeLayout(False)
         Me.pnlMatakuliah.PerformLayout()
+        CType(Me.dgvMatakuliah, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlJadwal.ResumeLayout(False)
         Me.pnlJadwal.PerformLayout()
         CType(Me.dgvJadwal, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvMatakuliah, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -310,4 +323,5 @@ Partial Class Form1
     Friend WithEvents dgvJadwal As DataGridView
     Friend WithEvents Label3 As Label
     Friend WithEvents dgvMatakuliah As DataGridView
+    Friend WithEvents btnLogout As Button
 End Class
