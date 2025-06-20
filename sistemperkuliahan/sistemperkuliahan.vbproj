@@ -91,6 +91,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="model\CourseModel.vb" />
+    <Compile Include="model\ScheduleModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

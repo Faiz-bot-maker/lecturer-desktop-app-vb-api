@@ -8,12 +8,19 @@
             ' Inisialisasi API Client
             Dim apiClient As New ApiClient()
 
-            ' Panggil API
-            Dim url As String = "http://localhost:9090/api/v1/lecturer/course"
+            ' Panggil API courses
+            Dim url As String = "http://localhost:9090/api/v1/lecturer/courses"
             Dim courses As List(Of CourseModel) = Await apiClient.GetDataAsync(Of List(Of CourseModel))(url)
 
             ' Tampilkan di DataGridView
             dgvMatakuliah.DataSource = courses
+
+            ' Panggil API schedules
+            url = "http://localhost:9090/api/v1/lecturer/schedules"
+            Dim schedule As List(Of ScheduleModel) = Await apiClient.GetDataAsync(Of List(Of ScheduleModel))(url)
+
+            ' Tampilkan di DataGridView
+            dgvJadwal.DataSource = schedule
 
         Catch ex As Exception
             MessageBox.Show("Error saat memuat data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -21,7 +28,7 @@
     End Sub
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click, Button1.Click
+    Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click, Button1.Click
         pnlDashboard.Show()
     End Sub
 
@@ -30,9 +37,6 @@
         LoginForm.Show()
     End Sub
 
-    Private Sub btnAbsen_Click(sender As Object, e As EventArgs) Handles btnAbsen.Click
-        pnlAbsen.Show()
-    End Sub
 
     Private Sub btnMatakuliah_Click(sender As Object, e As EventArgs) Handles btnMatakuliah.Click
         pnlMatakuliah.Show()
