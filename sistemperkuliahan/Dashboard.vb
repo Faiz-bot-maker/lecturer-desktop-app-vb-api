@@ -1,34 +1,28 @@
 ﻿Public Class Dashboard
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        RefreshData()
     End Sub
+
+    Public Async Sub RefreshData()
+        Try
+            ' Inisialisasi API Client
+            Dim apiClient As New ApiClient()
+
+            ' Panggil API
+            Dim url As String = "http://localhost:9090/api/v1/lecturer/course"
+            Dim courses As List(Of CourseModel) = Await apiClient.GetDataAsync(Of List(Of CourseModel))(url)
+
+            ' Tampilkan di DataGridView
+            dgvMatakuliah.DataSource = courses
+
+        Catch ex As Exception
+            MessageBox.Show("Error saat memuat data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click, Button1.Click
         pnlDashboard.Show()
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button6_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button6_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
