@@ -50,5 +50,31 @@
         pnlDashboard.Hide()
         pnlAbsen.Hide()
         pnlMatakuliah.Hide()
+        pnlCourseMhs.Hide()
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+        pnlJadwal.Hide()
+        pnlDashboard.Hide()
+        pnlAbsen.Hide()
+        pnlMatakuliah.Hide()
+        pnlCourseMhs.Show()
+    End Sub
+
+    Private Sub btnCourseMhs_Click(sender As Object, e As EventArgs) Handles btnCourseMhs.Click
+        pnlJadwal.Hide()
+        pnlDashboard.Hide()
+        pnlAbsen.Hide()
+        pnlMatakuliah.Hide()
+        pnlCourseMhs.Show()
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        pnlMatakuliah.Show()
+        pnlCourseMhs.Hide()
+    End Sub
+
+    Private Sub pnlMatakuliah_Paint(sender As Object, e As PaintEventArgs) Handles pnlMatakuliah.Paint
+
     End Sub
 End Class

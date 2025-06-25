@@ -23,11 +23,11 @@ Partial Class LoginForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -45,23 +45,21 @@ Partial Class LoginForm
         Me.Panel1.Size = New System.Drawing.Size(290, 316)
         Me.Panel1.TabIndex = 0
         '
-        'Button1
+        'TextBox2
         '
-        Me.Button1.Location = New System.Drawing.Point(92, 253)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(108, 50)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "LOGIN"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.TextBox2.Location = New System.Drawing.Point(33, 187)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(235, 29)
+        Me.TextBox2.TabIndex = 4
         '
-        'Label1
+        'TextBox1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(34, 110)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Username"
+        Me.TextBox1.Location = New System.Drawing.Point(33, 126)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(235, 29)
+        Me.TextBox1.TabIndex = 3
         '
         'Label2
         '
@@ -72,21 +70,23 @@ Partial Class LoginForm
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Password"
         '
-        'TextBox1
+        'Label1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(33, 126)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(235, 29)
-        Me.TextBox1.TabIndex = 3
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(34, 110)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(55, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Username"
         '
-        'TextBox2
+        'Button1
         '
-        Me.TextBox2.Location = New System.Drawing.Point(33, 187)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(235, 29)
-        Me.TextBox2.TabIndex = 4
+        Me.Button1.Location = New System.Drawing.Point(92, 253)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(108, 50)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "LOGIN"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'btnExit
         '
@@ -107,6 +107,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "LoginForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "LoginForm"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
