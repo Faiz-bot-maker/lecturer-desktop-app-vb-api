@@ -35,24 +35,29 @@ Partial Class Dashboard
         Me.Button2 = New System.Windows.Forms.Button()
         Me.pnlAbsen = New System.Windows.Forms.Panel()
         Me.pnlMatakuliah = New System.Windows.Forms.Panel()
-        Me.pnlCourseMhs = New System.Windows.Forms.Panel()
-        Me.btnBack = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnCourseMhs = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dgvMatakuliah = New System.Windows.Forms.DataGridView()
+        Me.pnlCourseMhs = New System.Windows.Forms.Panel()
+        Me.btnBack = New System.Windows.Forms.Button()
         Me.pnlJadwal = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dgvJadwal = New System.Windows.Forms.DataGridView()
         Me.pnlDashboard = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Header.SuspendLayout()
+        Me.pnlAbsen.SuspendLayout()
         Me.pnlMatakuliah.SuspendLayout()
-        Me.pnlCourseMhs.SuspendLayout()
         CType(Me.dgvMatakuliah, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlCourseMhs.SuspendLayout()
         Me.pnlJadwal.SuspendLayout()
         CType(Me.dgvJadwal, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Sidebar
@@ -186,6 +191,9 @@ Partial Class Dashboard
         '
         'pnlAbsen
         '
+        Me.pnlAbsen.Controls.Add(Me.Button4)
+        Me.pnlAbsen.Controls.Add(Me.Button3)
+        Me.pnlAbsen.Controls.Add(Me.DataGridView1)
         Me.pnlAbsen.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlAbsen.Location = New System.Drawing.Point(194, 41)
         Me.pnlAbsen.Name = "pnlAbsen"
@@ -203,27 +211,6 @@ Partial Class Dashboard
         Me.pnlMatakuliah.Name = "pnlMatakuliah"
         Me.pnlMatakuliah.Size = New System.Drawing.Size(766, 499)
         Me.pnlMatakuliah.TabIndex = 4
-        '
-        'pnlCourseMhs
-        '
-        Me.pnlCourseMhs.Controls.Add(Me.btnBack)
-        Me.pnlCourseMhs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlCourseMhs.Location = New System.Drawing.Point(194, 41)
-        Me.pnlCourseMhs.Name = "pnlCourseMhs"
-        Me.pnlCourseMhs.Size = New System.Drawing.Size(766, 499)
-        Me.pnlCourseMhs.TabIndex = 10
-        '
-        'btnBack
-        '
-        Me.btnBack.FlatAppearance.BorderSize = 0
-        Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnBack.Image = Global.sistemperkuliahan.My.Resources.Resources.left_arrow
-        Me.btnBack.Location = New System.Drawing.Point(6, 6)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(39, 32)
-        Me.btnBack.TabIndex = 0
-        Me.btnBack.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -273,6 +260,27 @@ Partial Class Dashboard
         Me.dgvMatakuliah.Size = New System.Drawing.Size(573, 319)
         Me.dgvMatakuliah.TabIndex = 8
         '
+        'pnlCourseMhs
+        '
+        Me.pnlCourseMhs.Controls.Add(Me.btnBack)
+        Me.pnlCourseMhs.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlCourseMhs.Location = New System.Drawing.Point(194, 41)
+        Me.pnlCourseMhs.Name = "pnlCourseMhs"
+        Me.pnlCourseMhs.Size = New System.Drawing.Size(766, 499)
+        Me.pnlCourseMhs.TabIndex = 10
+        '
+        'btnBack
+        '
+        Me.btnBack.FlatAppearance.BorderSize = 0
+        Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnBack.Image = Global.sistemperkuliahan.My.Resources.Resources.left_arrow
+        Me.btnBack.Location = New System.Drawing.Point(6, 6)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(39, 32)
+        Me.btnBack.TabIndex = 0
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
         'pnlJadwal
         '
         Me.pnlJadwal.Controls.Add(Me.Label2)
@@ -314,20 +322,45 @@ Partial Class Dashboard
         Me.pnlDashboard.Size = New System.Drawing.Size(766, 499)
         Me.pnlDashboard.TabIndex = 2
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(24, 25)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(444, 270)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(312, 301)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 1
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(393, 301)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 2
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(248, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(960, 540)
+        Me.Controls.Add(Me.pnlAbsen)
         Me.Controls.Add(Me.pnlDashboard)
         Me.Controls.Add(Me.pnlMatakuliah)
         Me.Controls.Add(Me.pnlCourseMhs)
-        Me.Controls.Add(Me.pnlAbsen)
         Me.Controls.Add(Me.pnlJadwal)
         Me.Controls.Add(Me.Header)
         Me.Controls.Add(Me.Sidebar)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Form1"
@@ -335,13 +368,15 @@ Partial Class Dashboard
         Me.Sidebar.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Header.ResumeLayout(False)
+        Me.pnlAbsen.ResumeLayout(False)
         Me.pnlMatakuliah.ResumeLayout(False)
         Me.pnlMatakuliah.PerformLayout()
-        Me.pnlCourseMhs.ResumeLayout(False)
         CType(Me.dgvMatakuliah, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlCourseMhs.ResumeLayout(False)
         Me.pnlJadwal.ResumeLayout(False)
         Me.pnlJadwal.PerformLayout()
         CType(Me.dgvJadwal, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -368,4 +403,7 @@ Partial Class Dashboard
     Friend WithEvents btnCourseMhs As Button
     Friend WithEvents pnlCourseMhs As Panel
     Friend WithEvents btnBack As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
 End Class
