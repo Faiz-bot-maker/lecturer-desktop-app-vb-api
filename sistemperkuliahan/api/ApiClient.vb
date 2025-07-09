@@ -9,15 +9,17 @@ Public Class ApiClient
 
     Private ReadOnly client As HttpClient
 
-    Public Sub New()
+    Public Sub New(Optional token As String = Nothing)
 
         client = New HttpClient()
-        client.DefaultRequestHeaders.Add("Authorization", "9dc225d3-4668-4e4b-8e50-810bec5625e2")
 
     End Sub
 
     ' --- GET ---
-    Public Async Function GetDataAsync(Of T)(url As String) As Task(Of T)
+    Public Async Function GetDataAsync(Of T)(token As String, url As String) As Task(Of T)
+        client.DefaultRequestHeaders.Clear()
+        client.DefaultRequestHeaders.Add("Authorization", token)
+
         Dim response As HttpResponseMessage = Await client.GetAsync(url)
         response.EnsureSuccessStatusCode()
 
@@ -28,4 +30,57 @@ Public Class ApiClient
 
         Return JsonConvert.DeserializeObject(Of T)(dataPart.ToString())
     End Function
+
+    ' --- POST ---
+    Public Async Function PostDataAsync(Of T)(token As String, url As String, data As Object) As Task(Of T)
+        client.DefaultRequestHeaders.Clear()
+        client.DefaultRequestHeaders.Add("Authorization", token)
+
+        Dim json = JsonConvert.SerializeObject(data)
+        Dim content = New StringContent(json, Nothing, "application/json")
+
+        Dim response = Await client.PostAsync(url, content)
+        response.EnsureSuccessStatusCode()
+
+        Dim responseJson = Await response.Content.ReadAsStringAsync()
+        Return JsonConvert.DeserializeObject(Of T)(responseJson)
+    End Function
+
+    ' --- PUT ---
+    Public Async Function PutDataAsync(Of T)(token As String, url As String, data As Object) As Task(Of T)
+        client.DefaultRequestHeaders.Clear()
+        client.DefaultRequestHeaders.Add("Authorization", token)
+
+        Dim json = JsonConvert.SerializeObject(data)
+        Dim content = New StringContent(json, Nothing, "application/json")
+
+        Dim response = Await client.PutAsync(url, content)
+        response.EnsureSuccessStatusCode()
+
+        Dim responseJson = Await response.Content.ReadAsStringAsync()
+        Return JsonConvert.DeserializeObject(Of T)(responseJson)
+    End Function
+
+    ' --- DELETE ---
+    Public Async Function DeleteDataAsync(token As String, url As String) As Task(Of String)
+        client.DefaultRequestHeaders.Clear()
+        client.DefaultRequestHeaders.Add("Authorization", token)
+
+        Dim response = Await client.DeleteAsync(url)
+        response.EnsureSuccessStatusCode()
+        Return Await response.Content.ReadAsStringAsync()
+    End Function
+
+    Public Async Function LoginAsync(Of T)(url As String, data As Object) As Task(Of T)
+
+        Dim json = JsonConvert.SerializeObject(data)
+        Dim content = New StringContent(json, Nothing, "application/json")
+
+        Dim response = Await client.PostAsync(url, content)
+        response.EnsureSuccessStatusCode()
+
+        Dim responseJson = Await response.Content.ReadAsStringAsync()
+        Return JsonConvert.DeserializeObject(Of T)(responseJson)
+    End Function
+
 End Class

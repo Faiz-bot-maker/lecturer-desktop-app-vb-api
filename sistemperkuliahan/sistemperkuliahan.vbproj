@@ -90,8 +90,13 @@
     <Compile Include="LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="model\ApiModel.vb" />
+    <Compile Include="model\AttendanceModel.vb" />
     <Compile Include="model\CourseModel.vb" />
+    <Compile Include="model\GradeModel.vb" />
+    <Compile Include="model\LoginModel.vb" />
     <Compile Include="model\ScheduleModel.vb" />
+    <Compile Include="model\StudentModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
