@@ -48,7 +48,14 @@ Public Class Dashboard
         pnlDashboard.Show()
     End Sub
 
-    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+    Private Async Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        ' Inisialisasi API Client
+        Dim apiClient As New ApiClient()
+
+        ' Panggil API courses
+        Dim url As String = "http://localhost:9090/logout"
+        Await apiClient.PostDataAsync(Of Object)(Me.token, url, Nothing)
+
         Me.Hide()
         LoginForm.Show()
     End Sub
