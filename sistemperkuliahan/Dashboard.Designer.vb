@@ -47,6 +47,7 @@ Partial Class Dashboard
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dgvJadwal = New System.Windows.Forms.DataGridView()
         Me.pnlDashboard = New System.Windows.Forms.Panel()
+        Me.btnAbsen = New System.Windows.Forms.Button()
         Me.pnlNilai = New System.Windows.Forms.Panel()
         Me.btnClosePnlNilai = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -64,6 +65,7 @@ Partial Class Dashboard
         CType(Me.dgvStudents, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlJadwal.SuspendLayout()
         CType(Me.dgvJadwal, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDashboard.SuspendLayout()
         Me.pnlNilai.SuspendLayout()
         CType(Me.dgvStudentGrade, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlAbsen.SuspendLayout()
@@ -363,12 +365,22 @@ Partial Class Dashboard
         '
         'pnlDashboard
         '
+        Me.pnlDashboard.Controls.Add(Me.btnAbsen)
         Me.pnlDashboard.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlDashboard.Location = New System.Drawing.Point(259, 50)
         Me.pnlDashboard.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlDashboard.Name = "pnlDashboard"
         Me.pnlDashboard.Size = New System.Drawing.Size(1021, 615)
         Me.pnlDashboard.TabIndex = 2
+        '
+        'btnAbsen
+        '
+        Me.btnAbsen.Location = New System.Drawing.Point(391, 104)
+        Me.btnAbsen.Name = "btnAbsen"
+        Me.btnAbsen.Size = New System.Drawing.Size(75, 23)
+        Me.btnAbsen.TabIndex = 0
+        Me.btnAbsen.Text = "Absen"
+        Me.btnAbsen.UseVisualStyleBackColor = True
         '
         'pnlNilai
         '
@@ -501,6 +513,7 @@ Partial Class Dashboard
         Me.pnlJadwal.ResumeLayout(False)
         Me.pnlJadwal.PerformLayout()
         CType(Me.dgvJadwal, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDashboard.ResumeLayout(False)
         Me.pnlNilai.ResumeLayout(False)
         Me.pnlNilai.PerformLayout()
         CType(Me.dgvStudentGrade, System.ComponentModel.ISupportInitialize).EndInit()
@@ -543,4 +556,5 @@ Partial Class Dashboard
     Friend WithEvents btnClosePnlAbsensi As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents dgvAbsensi As DataGridView
+    Friend WithEvents btnAbsen As Button
 End Class

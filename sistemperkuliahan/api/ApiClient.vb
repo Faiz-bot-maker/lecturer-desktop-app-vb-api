@@ -28,7 +28,12 @@ Public Class ApiClient
         Dim jsonObj As JObject = JObject.Parse(jsonString)
         Dim dataPart = jsonObj("data")
 
-        Return JsonConvert.DeserializeObject(Of T)(dataPart.ToString())
+        Dim jsonText As String = dataPart.ToString()
+        If GetType(T) = GetType(Boolean) Then
+            jsonText = jsonText.ToLower() ' ubah "True" menjadi "true"
+        End If
+
+        Return JsonConvert.DeserializeObject(Of T)(jsonText)
     End Function
 
     ' --- POST ---

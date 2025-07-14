@@ -17,6 +17,7 @@ Public Class Dashboard
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RefreshData()
+        CheckLecturerAttendStatus()
     End Sub
 
     Public Async Sub RefreshData()
@@ -43,6 +44,31 @@ Public Class Dashboard
         End Try
     End Sub
 
+    Public Async Sub CheckLecturerAttendStatus()
+        Try
+            ' Inisialisasi API Client
+            Dim apiClient As New ApiClient()
+
+            Dim url As String = "http://localhost:9090/api/v1/lecturer/schedules/coming"
+            Dim isUpcomingSchedule As Boolean = Await apiClient.GetDataAsync(Of Boolean)(Me.token, url)
+
+            MessageBox.Show("data: " & isUpcomingSchedule)
+
+            If isUpcomingSchedule Then
+                btnAbsen.Text = "Absen"
+                btnAbsen.Enabled = True
+            Else
+                btnAbsen.Text = "Tidak Ada Jadwal"
+                btnAbsen.Enabled = False
+            End If
+
+        Catch ex As Exception
+            btnAbsen.Enabled = False
+            MessageBox.Show("Error saat memuat data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+
+        End Try
+    End Sub
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click, Button1.Click
         pnlDashboard.Show()
@@ -175,4 +201,14 @@ Public Class Dashboard
         PnlAbsen.Hide()
         pnlCourseMhs.Show()
     End Sub
+
+    Private Async Function btnAbsen_ClickAsync(sender As Object, e As EventArgs) As Task Handles btnAbsen.Click
+        ' Inisialisasi API Client
+        Dim apiClient As New ApiClient()
+
+        ' Panggil API courses
+        Dim url As String = "http://localhost:9090/api/v1/lecturer/attendance"
+        Await apiClient.PostDataAsync(Of Object)(Me.token, url, Nothing)
+
+    End Function
 End Class
