@@ -587,8 +587,8 @@ Partial Class Dashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(248, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(960, 540)
-        Me.Controls.Add(Me.pnlDashboard)
         Me.Controls.Add(Me.PnlAbsen)
+        Me.Controls.Add(Me.pnlDashboard)
         Me.Controls.Add(Me.pnlMatakuliah)
         Me.Controls.Add(Me.pnlJadwal)
         Me.Controls.Add(Me.pnlCourseMhs)

@@ -23,6 +23,7 @@ Partial Class FormAbsenEdit
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.cbStatus = New System.Windows.Forms.ComboBox()
+        Me.btnSimpanEdit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cbStatus
@@ -33,11 +34,21 @@ Partial Class FormAbsenEdit
         Me.cbStatus.Size = New System.Drawing.Size(121, 21)
         Me.cbStatus.TabIndex = 0
         '
+        'btnSimpanEdit
+        '
+        Me.btnSimpanEdit.Location = New System.Drawing.Point(80, 93)
+        Me.btnSimpanEdit.Name = "btnSimpanEdit"
+        Me.btnSimpanEdit.Size = New System.Drawing.Size(102, 27)
+        Me.btnSimpanEdit.TabIndex = 1
+        Me.btnSimpanEdit.Text = "Simpan"
+        Me.btnSimpanEdit.UseVisualStyleBackColor = True
+        '
         'FormAbsenEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(250, 132)
+        Me.Controls.Add(Me.btnSimpanEdit)
         Me.Controls.Add(Me.cbStatus)
         Me.Name = "FormAbsenEdit"
         Me.Text = "FormAbsenEdit"
@@ -46,4 +57,5 @@ Partial Class FormAbsenEdit
     End Sub
 
     Friend WithEvents cbStatus As ComboBox
+    Friend WithEvents btnSimpanEdit As Button
 End Class

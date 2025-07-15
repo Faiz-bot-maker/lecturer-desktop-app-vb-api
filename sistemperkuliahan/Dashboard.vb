@@ -247,4 +247,14 @@ Public Class Dashboard
     Private Sub btnAbsen_ClickAsync(sender As Object, e As EventArgs) Handles btnAbsen.Click
 
     End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        Dim formAbsenAdd As New FormAbsenAdd()
+        formAbsenAdd.Show()
+    End Sub
+
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        Dim formAbsenEdit As New FormAbsenEdit()
+        formAbsenEdit.Show()
+    End Sub
 End Class
