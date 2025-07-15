@@ -43,23 +43,11 @@ Partial Class Dashboard
         Me.dgvJadwal = New System.Windows.Forms.DataGridView()
         Me.pnlDashboard = New System.Windows.Forms.Panel()
         Me.btnAbsen = New System.Windows.Forms.Button()
-        Me.pnlNilai = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.dgvStudentGrade = New System.Windows.Forms.DataGridView()
         Me.PnlAbsen = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.dgvAbsensi = New System.Windows.Forms.DataGridView()
         Me.pnljmlhjdwl = New System.Windows.Forms.Panel()
         Me.pnljmlhmtkl = New System.Windows.Forms.Panel()
-        Me.jmlhMhs = New System.Windows.Forms.PictureBox()
-        Me.jmlhJdwl = New System.Windows.Forms.PictureBox()
-        Me.btnClosePnlCourseMhs = New System.Windows.Forms.Button()
-        Me.btnClosePnlAbsensi = New System.Windows.Forms.Button()
-        Me.btnClosePnlNilai = New System.Windows.Forms.Button()
-        Me.btnDashboard = New System.Windows.Forms.Button()
-        Me.btnMatakuliah = New System.Windows.Forms.Button()
-        Me.btnJadwal = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblJmlhMhs = New System.Windows.Forms.Label()
         Me.lblJmlhMatkul = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -67,6 +55,20 @@ Partial Class Dashboard
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
+        Me.pnlNilai = New System.Windows.Forms.Panel()
+        Me.btnDeletenilai = New System.Windows.Forms.Button()
+        Me.btnEditnilai = New System.Windows.Forms.Button()
+        Me.btnAddnilai = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnClosePnlAbsensi = New System.Windows.Forms.Button()
+        Me.jmlhJdwl = New System.Windows.Forms.PictureBox()
+        Me.jmlhMhs = New System.Windows.Forms.PictureBox()
+        Me.btnClosePnlCourseMhs = New System.Windows.Forms.Button()
+        Me.btnDashboard = New System.Windows.Forms.Button()
+        Me.btnMatakuliah = New System.Windows.Forms.Button()
+        Me.btnJadwal = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Sidebar.SuspendLayout()
         Me.Header.SuspendLayout()
         Me.pnlMatakuliah.SuspendLayout()
@@ -76,16 +78,16 @@ Partial Class Dashboard
         Me.pnlJadwal.SuspendLayout()
         CType(Me.dgvJadwal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlDashboard.SuspendLayout()
-        Me.pnlNilai.SuspendLayout()
-        CType(Me.dgvStudentGrade, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlAbsen.SuspendLayout()
         CType(Me.dgvAbsensi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnljmlhjdwl.SuspendLayout()
         Me.pnljmlhmtkl.SuspendLayout()
-        CType(Me.jmlhMhs, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.jmlhJdwl, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.pnlNilai.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.jmlhJdwl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.jmlhMhs, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Sidebar
@@ -312,40 +314,6 @@ Partial Class Dashboard
         Me.btnAbsen.Text = "Absen"
         Me.btnAbsen.UseVisualStyleBackColor = True
         '
-        'pnlNilai
-        '
-        Me.pnlNilai.Controls.Add(Me.btnClosePnlNilai)
-        Me.pnlNilai.Controls.Add(Me.Label5)
-        Me.pnlNilai.Controls.Add(Me.dgvStudentGrade)
-        Me.pnlNilai.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlNilai.Location = New System.Drawing.Point(194, 41)
-        Me.pnlNilai.Name = "pnlNilai"
-        Me.pnlNilai.Size = New System.Drawing.Size(766, 499)
-        Me.pnlNilai.TabIndex = 11
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label5.Location = New System.Drawing.Point(70, 25)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(206, 24)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "NILAI MAHASISWA"
-        '
-        'dgvStudentGrade
-        '
-        Me.dgvStudentGrade.AllowUserToAddRows = False
-        Me.dgvStudentGrade.AllowUserToDeleteRows = False
-        Me.dgvStudentGrade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvStudentGrade.Location = New System.Drawing.Point(24, 61)
-        Me.dgvStudentGrade.Name = "dgvStudentGrade"
-        Me.dgvStudentGrade.ReadOnly = True
-        Me.dgvStudentGrade.RowHeadersWidth = 51
-        Me.dgvStudentGrade.Size = New System.Drawing.Size(573, 319)
-        Me.dgvStudentGrade.TabIndex = 8
-        '
         'PnlAbsen
         '
         Me.PnlAbsen.Controls.Add(Me.btnDelete)
@@ -400,119 +368,6 @@ Partial Class Dashboard
         Me.pnljmlhmtkl.Name = "pnljmlhmtkl"
         Me.pnljmlhmtkl.Size = New System.Drawing.Size(137, 125)
         Me.pnljmlhmtkl.TabIndex = 2
-        '
-        'jmlhMhs
-        '
-        Me.jmlhMhs.BackColor = System.Drawing.Color.SpringGreen
-        Me.jmlhMhs.BackgroundImage = Global.sistemperkuliahan.My.Resources.Resources.group
-        Me.jmlhMhs.Location = New System.Drawing.Point(28, 17)
-        Me.jmlhMhs.Name = "jmlhMhs"
-        Me.jmlhMhs.Size = New System.Drawing.Size(81, 81)
-        Me.jmlhMhs.TabIndex = 0
-        Me.jmlhMhs.TabStop = False
-        '
-        'jmlhJdwl
-        '
-        Me.jmlhJdwl.BackColor = System.Drawing.Color.Yellow
-        Me.jmlhJdwl.BackgroundImage = Global.sistemperkuliahan.My.Resources.Resources.clock_dhs
-        Me.jmlhJdwl.Location = New System.Drawing.Point(31, 17)
-        Me.jmlhJdwl.Name = "jmlhJdwl"
-        Me.jmlhJdwl.Size = New System.Drawing.Size(81, 81)
-        Me.jmlhJdwl.TabIndex = 1
-        Me.jmlhJdwl.TabStop = False
-        '
-        'btnClosePnlCourseMhs
-        '
-        Me.btnClosePnlCourseMhs.FlatAppearance.BorderSize = 0
-        Me.btnClosePnlCourseMhs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClosePnlCourseMhs.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnClosePnlCourseMhs.Image = Global.sistemperkuliahan.My.Resources.Resources.left_arrow
-        Me.btnClosePnlCourseMhs.Location = New System.Drawing.Point(11, 21)
-        Me.btnClosePnlCourseMhs.Name = "btnClosePnlCourseMhs"
-        Me.btnClosePnlCourseMhs.Size = New System.Drawing.Size(39, 32)
-        Me.btnClosePnlCourseMhs.TabIndex = 0
-        Me.btnClosePnlCourseMhs.UseVisualStyleBackColor = True
-        '
-        'btnClosePnlAbsensi
-        '
-        Me.btnClosePnlAbsensi.FlatAppearance.BorderSize = 0
-        Me.btnClosePnlAbsensi.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClosePnlAbsensi.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnClosePnlAbsensi.Image = Global.sistemperkuliahan.My.Resources.Resources.left_arrow
-        Me.btnClosePnlAbsensi.Location = New System.Drawing.Point(25, 23)
-        Me.btnClosePnlAbsensi.Name = "btnClosePnlAbsensi"
-        Me.btnClosePnlAbsensi.Size = New System.Drawing.Size(39, 32)
-        Me.btnClosePnlAbsensi.TabIndex = 9
-        Me.btnClosePnlAbsensi.UseVisualStyleBackColor = True
-        '
-        'btnClosePnlNilai
-        '
-        Me.btnClosePnlNilai.FlatAppearance.BorderSize = 0
-        Me.btnClosePnlNilai.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClosePnlNilai.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnClosePnlNilai.Image = Global.sistemperkuliahan.My.Resources.Resources.left_arrow
-        Me.btnClosePnlNilai.Location = New System.Drawing.Point(25, 23)
-        Me.btnClosePnlNilai.Name = "btnClosePnlNilai"
-        Me.btnClosePnlNilai.Size = New System.Drawing.Size(39, 32)
-        Me.btnClosePnlNilai.TabIndex = 9
-        Me.btnClosePnlNilai.UseVisualStyleBackColor = True
-        '
-        'btnDashboard
-        '
-        Me.btnDashboard.FlatAppearance.BorderSize = 0
-        Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDashboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnDashboard.Image = CType(resources.GetObject("btnDashboard.Image"), System.Drawing.Image)
-        Me.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDashboard.Location = New System.Drawing.Point(3, 176)
-        Me.btnDashboard.Name = "btnDashboard"
-        Me.btnDashboard.Size = New System.Drawing.Size(191, 31)
-        Me.btnDashboard.TabIndex = 0
-        Me.btnDashboard.Text = "     Dashboard"
-        Me.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnDashboard.UseVisualStyleBackColor = True
-        '
-        'btnMatakuliah
-        '
-        Me.btnMatakuliah.FlatAppearance.BorderSize = 0
-        Me.btnMatakuliah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMatakuliah.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMatakuliah.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnMatakuliah.Image = CType(resources.GetObject("btnMatakuliah.Image"), System.Drawing.Image)
-        Me.btnMatakuliah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnMatakuliah.Location = New System.Drawing.Point(3, 212)
-        Me.btnMatakuliah.Name = "btnMatakuliah"
-        Me.btnMatakuliah.Size = New System.Drawing.Size(191, 31)
-        Me.btnMatakuliah.TabIndex = 2
-        Me.btnMatakuliah.Text = "     Matakuliah"
-        Me.btnMatakuliah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnMatakuliah.UseVisualStyleBackColor = True
-        '
-        'btnJadwal
-        '
-        Me.btnJadwal.FlatAppearance.BorderSize = 0
-        Me.btnJadwal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnJadwal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnJadwal.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnJadwal.Image = CType(resources.GetObject("btnJadwal.Image"), System.Drawing.Image)
-        Me.btnJadwal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnJadwal.Location = New System.Drawing.Point(3, 252)
-        Me.btnJadwal.Name = "btnJadwal"
-        Me.btnJadwal.Size = New System.Drawing.Size(188, 31)
-        Me.btnJadwal.TabIndex = 3
-        Me.btnJadwal.Text = "     Jadwal"
-        Me.btnJadwal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnJadwal.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(56, 35)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(75, 79)
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
         '
         'lblJmlhMhs
         '
@@ -581,18 +436,182 @@ Partial Class Dashboard
         Me.btnDelete.Text = "Hapus"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
+        'pnlNilai
+        '
+        Me.pnlNilai.Controls.Add(Me.btnDeletenilai)
+        Me.pnlNilai.Controls.Add(Me.btnEditnilai)
+        Me.pnlNilai.Controls.Add(Me.btnAddnilai)
+        Me.pnlNilai.Controls.Add(Me.Label9)
+        Me.pnlNilai.Controls.Add(Me.DataGridView1)
+        Me.pnlNilai.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlNilai.Location = New System.Drawing.Point(194, 41)
+        Me.pnlNilai.Name = "pnlNilai"
+        Me.pnlNilai.Size = New System.Drawing.Size(766, 499)
+        Me.pnlNilai.TabIndex = 13
+        '
+        'btnDeletenilai
+        '
+        Me.btnDeletenilai.Location = New System.Drawing.Point(474, 416)
+        Me.btnDeletenilai.Name = "btnDeletenilai"
+        Me.btnDeletenilai.Size = New System.Drawing.Size(107, 47)
+        Me.btnDeletenilai.TabIndex = 12
+        Me.btnDeletenilai.Text = "Hapus"
+        Me.btnDeletenilai.UseVisualStyleBackColor = True
+        '
+        'btnEditnilai
+        '
+        Me.btnEditnilai.Location = New System.Drawing.Point(347, 416)
+        Me.btnEditnilai.Name = "btnEditnilai"
+        Me.btnEditnilai.Size = New System.Drawing.Size(107, 47)
+        Me.btnEditnilai.TabIndex = 11
+        Me.btnEditnilai.Text = "Edit"
+        Me.btnEditnilai.UseVisualStyleBackColor = True
+        '
+        'btnAddnilai
+        '
+        Me.btnAddnilai.Location = New System.Drawing.Point(219, 416)
+        Me.btnAddnilai.Name = "btnAddnilai"
+        Me.btnAddnilai.Size = New System.Drawing.Size(107, 47)
+        Me.btnAddnilai.TabIndex = 10
+        Me.btnAddnilai.Text = "Tambah"
+        Me.btnAddnilai.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label9.Location = New System.Drawing.Point(21, 20)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(206, 24)
+        Me.Label9.TabIndex = 8
+        Me.Label9.Text = "NILAI MAHASISWA"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(24, 61)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.Size = New System.Drawing.Size(573, 319)
+        Me.DataGridView1.TabIndex = 8
+        '
+        'btnClosePnlAbsensi
+        '
+        Me.btnClosePnlAbsensi.FlatAppearance.BorderSize = 0
+        Me.btnClosePnlAbsensi.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClosePnlAbsensi.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnClosePnlAbsensi.Image = Global.sistemperkuliahan.My.Resources.Resources.left_arrow
+        Me.btnClosePnlAbsensi.Location = New System.Drawing.Point(25, 23)
+        Me.btnClosePnlAbsensi.Name = "btnClosePnlAbsensi"
+        Me.btnClosePnlAbsensi.Size = New System.Drawing.Size(39, 32)
+        Me.btnClosePnlAbsensi.TabIndex = 9
+        Me.btnClosePnlAbsensi.UseVisualStyleBackColor = True
+        '
+        'jmlhJdwl
+        '
+        Me.jmlhJdwl.BackColor = System.Drawing.Color.Yellow
+        Me.jmlhJdwl.BackgroundImage = Global.sistemperkuliahan.My.Resources.Resources.clock_dhs
+        Me.jmlhJdwl.Location = New System.Drawing.Point(31, 17)
+        Me.jmlhJdwl.Name = "jmlhJdwl"
+        Me.jmlhJdwl.Size = New System.Drawing.Size(81, 81)
+        Me.jmlhJdwl.TabIndex = 1
+        Me.jmlhJdwl.TabStop = False
+        '
+        'jmlhMhs
+        '
+        Me.jmlhMhs.BackColor = System.Drawing.Color.SpringGreen
+        Me.jmlhMhs.BackgroundImage = Global.sistemperkuliahan.My.Resources.Resources.group
+        Me.jmlhMhs.Location = New System.Drawing.Point(28, 17)
+        Me.jmlhMhs.Name = "jmlhMhs"
+        Me.jmlhMhs.Size = New System.Drawing.Size(81, 81)
+        Me.jmlhMhs.TabIndex = 0
+        Me.jmlhMhs.TabStop = False
+        '
+        'btnClosePnlCourseMhs
+        '
+        Me.btnClosePnlCourseMhs.FlatAppearance.BorderSize = 0
+        Me.btnClosePnlCourseMhs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClosePnlCourseMhs.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnClosePnlCourseMhs.Image = Global.sistemperkuliahan.My.Resources.Resources.left_arrow
+        Me.btnClosePnlCourseMhs.Location = New System.Drawing.Point(11, 21)
+        Me.btnClosePnlCourseMhs.Name = "btnClosePnlCourseMhs"
+        Me.btnClosePnlCourseMhs.Size = New System.Drawing.Size(39, 32)
+        Me.btnClosePnlCourseMhs.TabIndex = 0
+        Me.btnClosePnlCourseMhs.UseVisualStyleBackColor = True
+        '
+        'btnDashboard
+        '
+        Me.btnDashboard.FlatAppearance.BorderSize = 0
+        Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDashboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDashboard.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnDashboard.Image = CType(resources.GetObject("btnDashboard.Image"), System.Drawing.Image)
+        Me.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDashboard.Location = New System.Drawing.Point(3, 176)
+        Me.btnDashboard.Name = "btnDashboard"
+        Me.btnDashboard.Size = New System.Drawing.Size(191, 31)
+        Me.btnDashboard.TabIndex = 0
+        Me.btnDashboard.Text = "     Dashboard"
+        Me.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnDashboard.UseVisualStyleBackColor = True
+        '
+        'btnMatakuliah
+        '
+        Me.btnMatakuliah.FlatAppearance.BorderSize = 0
+        Me.btnMatakuliah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMatakuliah.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMatakuliah.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnMatakuliah.Image = CType(resources.GetObject("btnMatakuliah.Image"), System.Drawing.Image)
+        Me.btnMatakuliah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnMatakuliah.Location = New System.Drawing.Point(3, 212)
+        Me.btnMatakuliah.Name = "btnMatakuliah"
+        Me.btnMatakuliah.Size = New System.Drawing.Size(191, 31)
+        Me.btnMatakuliah.TabIndex = 2
+        Me.btnMatakuliah.Text = "     Matakuliah"
+        Me.btnMatakuliah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnMatakuliah.UseVisualStyleBackColor = True
+        '
+        'btnJadwal
+        '
+        Me.btnJadwal.FlatAppearance.BorderSize = 0
+        Me.btnJadwal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnJadwal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnJadwal.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnJadwal.Image = CType(resources.GetObject("btnJadwal.Image"), System.Drawing.Image)
+        Me.btnJadwal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnJadwal.Location = New System.Drawing.Point(3, 252)
+        Me.btnJadwal.Name = "btnJadwal"
+        Me.btnJadwal.Size = New System.Drawing.Size(188, 31)
+        Me.btnJadwal.TabIndex = 3
+        Me.btnJadwal.Text = "     Jadwal"
+        Me.btnJadwal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnJadwal.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(56, 35)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(75, 79)
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(248, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(960, 540)
+        Me.Controls.Add(Me.pnlNilai)
         Me.Controls.Add(Me.PnlAbsen)
         Me.Controls.Add(Me.pnlDashboard)
         Me.Controls.Add(Me.pnlMatakuliah)
         Me.Controls.Add(Me.pnlJadwal)
         Me.Controls.Add(Me.pnlCourseMhs)
-        Me.Controls.Add(Me.pnlNilai)
         Me.Controls.Add(Me.Header)
         Me.Controls.Add(Me.Sidebar)
         Me.Name = "Dashboard"
@@ -611,9 +630,6 @@ Partial Class Dashboard
         Me.pnlJadwal.PerformLayout()
         CType(Me.dgvJadwal, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlDashboard.ResumeLayout(False)
-        Me.pnlNilai.ResumeLayout(False)
-        Me.pnlNilai.PerformLayout()
-        CType(Me.dgvStudentGrade, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlAbsen.ResumeLayout(False)
         Me.PnlAbsen.PerformLayout()
         CType(Me.dgvAbsensi, System.ComponentModel.ISupportInitialize).EndInit()
@@ -621,11 +637,14 @@ Partial Class Dashboard
         Me.pnljmlhjdwl.PerformLayout()
         Me.pnljmlhmtkl.ResumeLayout(False)
         Me.pnljmlhmtkl.PerformLayout()
-        CType(Me.jmlhMhs, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.jmlhJdwl, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.pnlNilai.ResumeLayout(False)
+        Me.pnlNilai.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.jmlhJdwl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.jmlhMhs, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -651,10 +670,6 @@ Partial Class Dashboard
     Friend WithEvents btnClosePnlCourseMhs As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents dgvStudents As DataGridView
-    Friend WithEvents pnlNilai As Panel
-    Friend WithEvents Label5 As Label
-    Friend WithEvents dgvStudentGrade As DataGridView
-    Friend WithEvents btnClosePnlNilai As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Button3 As Button
@@ -674,4 +689,10 @@ Partial Class Dashboard
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnEdit As Button
     Friend WithEvents btnAdd As Button
+    Friend WithEvents pnlNilai As Panel
+    Friend WithEvents btnDeletenilai As Button
+    Friend WithEvents btnEditnilai As Button
+    Friend WithEvents btnAddnilai As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

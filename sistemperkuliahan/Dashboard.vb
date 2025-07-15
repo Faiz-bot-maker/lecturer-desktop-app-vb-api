@@ -165,7 +165,7 @@ Public Class Dashboard
         End Try
     End Sub
 
-    Private Sub btnClosePnlNilai_Click(sender As Object, e As EventArgs) Handles btnClosePnlNilai.Click
+    Private Sub btnClosePnlNilai_Click(sender As Object, e As EventArgs)
         pnlNilai.Hide()
         pnlCourseMhs.Show()
     End Sub
@@ -244,10 +244,6 @@ Public Class Dashboard
 
     End Sub
 
-    Private Sub btnAbsen_ClickAsync(sender As Object, e As EventArgs) Handles btnAbsen.Click
-
-    End Sub
-
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim formAbsenAdd As New FormAbsenAdd()
         formAbsenAdd.Show()
@@ -256,5 +252,15 @@ Public Class Dashboard
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         Dim formAbsenEdit As New FormAbsenEdit()
         formAbsenEdit.Show()
+    End Sub
+
+    Private Sub btnAddnilai_Click(sender As Object, e As EventArgs) Handles btnAddnilai.Click
+        Dim formNilai As New FormNilai()
+        formNilai.Show()
+    End Sub
+
+    Private Sub btnEditnilai_Click(sender As Object, e As EventArgs) Handles btnEditnilai.Click
+        Dim formNilai As New FormNilai()
+        formNilai.Show()
     End Sub
 End Class

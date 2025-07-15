@@ -96,6 +96,12 @@
     <Compile Include="FormAbsenEdit.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormNilai.Designer.vb">
+      <DependentUpon>FormNilai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNilai.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAbsenEdit.resx">
       <DependentUpon>FormAbsenEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNilai.resx">
+      <DependentUpon>FormNilai.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
