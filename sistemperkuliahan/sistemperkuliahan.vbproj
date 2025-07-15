@@ -84,6 +84,18 @@
       <DependentUpon>Dashboard.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormAbsenAdd.Designer.vb">
+      <DependentUpon>FormAbsenAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbsenAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbsenEdit.Designer.vb">
+      <DependentUpon>FormAbsenEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbsenEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </Compile>
@@ -117,6 +129,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbsenAdd.resx">
+      <DependentUpon>FormAbsenAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbsenEdit.resx">
+      <DependentUpon>FormAbsenEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
@@ -152,6 +170,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock dhs.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

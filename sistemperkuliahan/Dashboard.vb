@@ -211,4 +211,40 @@ Public Class Dashboard
         Await apiClient.PostDataAsync(Of Object)(Me.token, url, Nothing)
 
     End Function
+
+    Private Sub pnlDashboard_Paint(sender As Object, e As PaintEventArgs) Handles pnlDashboard.Paint
+
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Private Sub pnljmlhmtkl_Paint(sender As Object, e As PaintEventArgs) Handles pnljmlhmtkl.Paint
+
+    End Sub
+
+    Private Sub jmlhMhs_Click(sender As Object, e As EventArgs) Handles jmlhMhs.Click
+
+    End Sub
+
+    Private Sub lblJmlhMhs_Click(sender As Object, e As EventArgs) Handles lblJmlhMhs.Click
+
+    End Sub
+
+    Private Sub pnljmlhjdwl_Paint(sender As Object, e As PaintEventArgs) Handles pnljmlhjdwl.Paint
+
+    End Sub
+
+    Private Sub jmlhJdwl_Click(sender As Object, e As EventArgs) Handles jmlhJdwl.Click
+
+    End Sub
+
+    Private Sub lblJmlhMatkul_Click(sender As Object, e As EventArgs) Handles lblJmlhMatkul.Click
+
+    End Sub
+
+    Private Sub btnAbsen_ClickAsync(sender As Object, e As EventArgs) Handles btnAbsen.Click
+
+    End Sub
 End Class
