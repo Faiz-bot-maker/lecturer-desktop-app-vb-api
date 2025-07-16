@@ -110,12 +110,14 @@
     </Compile>
     <Compile Include="model\ApiModel.vb" />
     <Compile Include="model\AttendanceModel.vb" />
+    <Compile Include="model\AttendanceRequestModel.vb" />
     <Compile Include="model\CourseModel.vb" />
     <Compile Include="model\GradeComponent.vb" />
     <Compile Include="model\GradeCreateModel.vb" />
     <Compile Include="model\GradeModel.vb" />
     <Compile Include="model\LoginModel.vb" />
     <Compile Include="model\ScheduleModel.vb" />
+    <Compile Include="model\ScheduleResponseModel.vb" />
     <Compile Include="model\StudentModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

@@ -29,27 +29,31 @@ Partial Class FormAbsenEdit
         'cbStatus
         '
         Me.cbStatus.FormattingEnabled = True
-        Me.cbStatus.Location = New System.Drawing.Point(61, 53)
+        Me.cbStatus.Items.AddRange(New Object() {"Hadir", "Tidak Hadir"})
+        Me.cbStatus.Location = New System.Drawing.Point(81, 65)
+        Me.cbStatus.Margin = New System.Windows.Forms.Padding(4)
         Me.cbStatus.Name = "cbStatus"
-        Me.cbStatus.Size = New System.Drawing.Size(121, 21)
+        Me.cbStatus.Size = New System.Drawing.Size(160, 24)
         Me.cbStatus.TabIndex = 0
         '
         'btnSimpanEdit
         '
-        Me.btnSimpanEdit.Location = New System.Drawing.Point(80, 93)
+        Me.btnSimpanEdit.Location = New System.Drawing.Point(107, 114)
+        Me.btnSimpanEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSimpanEdit.Name = "btnSimpanEdit"
-        Me.btnSimpanEdit.Size = New System.Drawing.Size(102, 27)
+        Me.btnSimpanEdit.Size = New System.Drawing.Size(136, 33)
         Me.btnSimpanEdit.TabIndex = 1
         Me.btnSimpanEdit.Text = "Simpan"
         Me.btnSimpanEdit.UseVisualStyleBackColor = True
         '
         'FormAbsenEdit
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(250, 132)
+        Me.ClientSize = New System.Drawing.Size(333, 162)
         Me.Controls.Add(Me.btnSimpanEdit)
         Me.Controls.Add(Me.cbStatus)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FormAbsenEdit"
         Me.Text = "FormAbsenEdit"
         Me.ResumeLayout(False)

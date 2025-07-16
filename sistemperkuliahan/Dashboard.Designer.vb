@@ -25,7 +25,7 @@ Partial Class Dashboard
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         Me.Sidebar = New System.Windows.Forms.Panel()
         Me.btnDashboard = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblNama = New System.Windows.Forms.Label()
         Me.btnMatakuliah = New System.Windows.Forms.Button()
         Me.btnJadwal = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -50,17 +50,16 @@ Partial Class Dashboard
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnAbsen = New System.Windows.Forms.Button()
         Me.pnljmlhjdwl = New System.Windows.Forms.Panel()
-        Me.lblJmlhMatkul = New System.Windows.Forms.Label()
+        Me.lblJmlhJadwal = New System.Windows.Forms.Label()
         Me.jmlhJdwl = New System.Windows.Forms.PictureBox()
         Me.pnljmlhmtkl = New System.Windows.Forms.Panel()
-        Me.lblJmlhMhs = New System.Windows.Forms.Label()
-        Me.jmlhMhs = New System.Windows.Forms.PictureBox()
+        Me.lblJmlhMatkul = New System.Windows.Forms.Label()
+        Me.jmlhMatkul = New System.Windows.Forms.PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.PnlAbsen = New System.Windows.Forms.Panel()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
-        Me.btnClosePnlAbsensi = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.dgvAbsensi = New System.Windows.Forms.DataGridView()
         Me.pnlNilai = New System.Windows.Forms.Panel()
@@ -83,7 +82,7 @@ Partial Class Dashboard
         Me.pnljmlhjdwl.SuspendLayout()
         CType(Me.jmlhJdwl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnljmlhmtkl.SuspendLayout()
-        CType(Me.jmlhMhs, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.jmlhMatkul, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlAbsen.SuspendLayout()
         CType(Me.dgvAbsensi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlNilai.SuspendLayout()
@@ -94,7 +93,7 @@ Partial Class Dashboard
         '
         Me.Sidebar.BackColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Sidebar.Controls.Add(Me.btnDashboard)
-        Me.Sidebar.Controls.Add(Me.Label1)
+        Me.Sidebar.Controls.Add(Me.lblNama)
         Me.Sidebar.Controls.Add(Me.btnMatakuliah)
         Me.Sidebar.Controls.Add(Me.btnJadwal)
         Me.Sidebar.Controls.Add(Me.PictureBox1)
@@ -122,16 +121,16 @@ Partial Class Dashboard
         Me.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnDashboard.UseVisualStyleBackColor = True
         '
-        'Label1
+        'lblNama
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(71, 144)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(36, 16)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "NID :"
+        Me.lblNama.AutoSize = True
+        Me.lblNama.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblNama.Location = New System.Drawing.Point(113, 155)
+        Me.lblNama.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblNama.Name = "lblNama"
+        Me.lblNama.Size = New System.Drawing.Size(19, 16)
+        Me.lblNama.TabIndex = 6
+        Me.lblNama.Text = "---"
         '
         'btnMatakuliah
         '
@@ -408,17 +407,17 @@ Partial Class Dashboard
         '
         'btnAbsen
         '
-        Me.btnAbsen.Location = New System.Drawing.Point(689, 38)
+        Me.btnAbsen.Location = New System.Drawing.Point(726, 59)
         Me.btnAbsen.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnAbsen.Name = "btnAbsen"
-        Me.btnAbsen.Size = New System.Drawing.Size(183, 154)
+        Me.btnAbsen.Size = New System.Drawing.Size(108, 100)
         Me.btnAbsen.TabIndex = 0
         Me.btnAbsen.Text = "Absen"
         Me.btnAbsen.UseVisualStyleBackColor = True
         '
         'pnljmlhjdwl
         '
-        Me.pnljmlhjdwl.Controls.Add(Me.lblJmlhMatkul)
+        Me.pnljmlhjdwl.Controls.Add(Me.lblJmlhJadwal)
         Me.pnljmlhjdwl.Controls.Add(Me.jmlhJdwl)
         Me.pnljmlhjdwl.Location = New System.Drawing.Point(373, 38)
         Me.pnljmlhjdwl.Margin = New System.Windows.Forms.Padding(4)
@@ -426,20 +425,21 @@ Partial Class Dashboard
         Me.pnljmlhjdwl.Size = New System.Drawing.Size(183, 154)
         Me.pnljmlhjdwl.TabIndex = 1
         '
-        'lblJmlhMatkul
+        'lblJmlhJadwal
         '
-        Me.lblJmlhMatkul.AutoSize = True
-        Me.lblJmlhMatkul.Location = New System.Drawing.Point(81, 130)
-        Me.lblJmlhMatkul.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblJmlhMatkul.Name = "lblJmlhMatkul"
-        Me.lblJmlhMatkul.Size = New System.Drawing.Size(25, 16)
-        Me.lblJmlhMatkul.TabIndex = 2
-        Me.lblJmlhMatkul.Text = "- - -"
+        Me.lblJmlhJadwal.AutoSize = True
+        Me.lblJmlhJadwal.Location = New System.Drawing.Point(81, 130)
+        Me.lblJmlhJadwal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblJmlhJadwal.Name = "lblJmlhJadwal"
+        Me.lblJmlhJadwal.Size = New System.Drawing.Size(25, 16)
+        Me.lblJmlhJadwal.TabIndex = 2
+        Me.lblJmlhJadwal.Text = "- - -"
         '
         'jmlhJdwl
         '
         Me.jmlhJdwl.BackColor = System.Drawing.Color.Yellow
         Me.jmlhJdwl.BackgroundImage = Global.sistemperkuliahan.My.Resources.Resources.clock_dhs
+        Me.jmlhJdwl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.jmlhJdwl.Location = New System.Drawing.Point(41, 21)
         Me.jmlhJdwl.Margin = New System.Windows.Forms.Padding(4)
         Me.jmlhJdwl.Name = "jmlhJdwl"
@@ -449,34 +449,34 @@ Partial Class Dashboard
         '
         'pnljmlhmtkl
         '
-        Me.pnljmlhmtkl.Controls.Add(Me.lblJmlhMhs)
-        Me.pnljmlhmtkl.Controls.Add(Me.jmlhMhs)
+        Me.pnljmlhmtkl.Controls.Add(Me.lblJmlhMatkul)
+        Me.pnljmlhmtkl.Controls.Add(Me.jmlhMatkul)
         Me.pnljmlhmtkl.Location = New System.Drawing.Point(65, 38)
         Me.pnljmlhmtkl.Margin = New System.Windows.Forms.Padding(4)
         Me.pnljmlhmtkl.Name = "pnljmlhmtkl"
         Me.pnljmlhmtkl.Size = New System.Drawing.Size(183, 154)
         Me.pnljmlhmtkl.TabIndex = 2
         '
-        'lblJmlhMhs
+        'lblJmlhMatkul
         '
-        Me.lblJmlhMhs.AutoSize = True
-        Me.lblJmlhMhs.Location = New System.Drawing.Point(76, 130)
-        Me.lblJmlhMhs.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblJmlhMhs.Name = "lblJmlhMhs"
-        Me.lblJmlhMhs.Size = New System.Drawing.Size(25, 16)
-        Me.lblJmlhMhs.TabIndex = 1
-        Me.lblJmlhMhs.Text = "- - -"
+        Me.lblJmlhMatkul.AutoSize = True
+        Me.lblJmlhMatkul.Location = New System.Drawing.Point(76, 130)
+        Me.lblJmlhMatkul.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblJmlhMatkul.Name = "lblJmlhMatkul"
+        Me.lblJmlhMatkul.Size = New System.Drawing.Size(25, 16)
+        Me.lblJmlhMatkul.TabIndex = 1
+        Me.lblJmlhMatkul.Text = "- - -"
         '
-        'jmlhMhs
+        'jmlhMatkul
         '
-        Me.jmlhMhs.BackColor = System.Drawing.Color.SpringGreen
-        Me.jmlhMhs.BackgroundImage = Global.sistemperkuliahan.My.Resources.Resources.group
-        Me.jmlhMhs.Location = New System.Drawing.Point(37, 21)
-        Me.jmlhMhs.Margin = New System.Windows.Forms.Padding(4)
-        Me.jmlhMhs.Name = "jmlhMhs"
-        Me.jmlhMhs.Size = New System.Drawing.Size(108, 100)
-        Me.jmlhMhs.TabIndex = 0
-        Me.jmlhMhs.TabStop = False
+        Me.jmlhMatkul.BackColor = System.Drawing.Color.SpringGreen
+        Me.jmlhMatkul.BackgroundImage = Global.sistemperkuliahan.My.Resources.Resources.group
+        Me.jmlhMatkul.Location = New System.Drawing.Point(37, 21)
+        Me.jmlhMatkul.Margin = New System.Windows.Forms.Padding(4)
+        Me.jmlhMatkul.Name = "jmlhMatkul"
+        Me.jmlhMatkul.Size = New System.Drawing.Size(108, 100)
+        Me.jmlhMatkul.TabIndex = 0
+        Me.jmlhMatkul.TabStop = False
         '
         'Label8
         '
@@ -494,7 +494,6 @@ Partial Class Dashboard
         Me.PnlAbsen.Controls.Add(Me.btnDelete)
         Me.PnlAbsen.Controls.Add(Me.btnEdit)
         Me.PnlAbsen.Controls.Add(Me.btnAdd)
-        Me.PnlAbsen.Controls.Add(Me.btnClosePnlAbsensi)
         Me.PnlAbsen.Controls.Add(Me.Label7)
         Me.PnlAbsen.Controls.Add(Me.dgvAbsensi)
         Me.PnlAbsen.Dock = System.Windows.Forms.DockStyle.Fill
@@ -534,25 +533,12 @@ Partial Class Dashboard
         Me.btnAdd.Text = "Tambah"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'btnClosePnlAbsensi
-        '
-        Me.btnClosePnlAbsensi.FlatAppearance.BorderSize = 0
-        Me.btnClosePnlAbsensi.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClosePnlAbsensi.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnClosePnlAbsensi.Image = Global.sistemperkuliahan.My.Resources.Resources.left_arrow
-        Me.btnClosePnlAbsensi.Location = New System.Drawing.Point(33, 28)
-        Me.btnClosePnlAbsensi.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnClosePnlAbsensi.Name = "btnClosePnlAbsensi"
-        Me.btnClosePnlAbsensi.Size = New System.Drawing.Size(52, 39)
-        Me.btnClosePnlAbsensi.TabIndex = 9
-        Me.btnClosePnlAbsensi.UseVisualStyleBackColor = True
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label7.Location = New System.Drawing.Point(93, 31)
+        Me.Label7.Location = New System.Drawing.Point(30, 31)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(311, 32)
@@ -580,10 +566,10 @@ Partial Class Dashboard
         Me.pnlNilai.Controls.Add(Me.Label9)
         Me.pnlNilai.Controls.Add(Me.dgvStudentGrade)
         Me.pnlNilai.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlNilai.Location = New System.Drawing.Point(259, 50)
+        Me.pnlNilai.Location = New System.Drawing.Point(259, 0)
         Me.pnlNilai.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlNilai.Name = "pnlNilai"
-        Me.pnlNilai.Size = New System.Drawing.Size(1021, 615)
+        Me.pnlNilai.Size = New System.Drawing.Size(1021, 665)
         Me.pnlNilai.TabIndex = 13
         '
         'btnDeletenilai
@@ -647,13 +633,13 @@ Partial Class Dashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(248, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1280, 665)
-        Me.Controls.Add(Me.pnlNilai)
         Me.Controls.Add(Me.pnlDashboard)
         Me.Controls.Add(Me.pnlMatakuliah)
         Me.Controls.Add(Me.pnlJadwal)
         Me.Controls.Add(Me.pnlCourseMhs)
         Me.Controls.Add(Me.PnlAbsen)
         Me.Controls.Add(Me.Header)
+        Me.Controls.Add(Me.pnlNilai)
         Me.Controls.Add(Me.Sidebar)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Dashboard"
@@ -680,7 +666,7 @@ Partial Class Dashboard
         CType(Me.jmlhJdwl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnljmlhmtkl.ResumeLayout(False)
         Me.pnljmlhmtkl.PerformLayout()
-        CType(Me.jmlhMhs, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.jmlhMatkul, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlAbsen.ResumeLayout(False)
         Me.PnlAbsen.PerformLayout()
         CType(Me.dgvAbsensi, System.ComponentModel.ISupportInitialize).EndInit()
@@ -697,7 +683,7 @@ Partial Class Dashboard
     Friend WithEvents btnJadwal As Button
     Friend WithEvents btnMatakuliah As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblNama As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button2 As Button
     Friend WithEvents pnlMatakuliah As Panel
@@ -716,16 +702,15 @@ Partial Class Dashboard
     Friend WithEvents Label6 As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents PnlAbsen As Panel
-    Friend WithEvents btnClosePnlAbsensi As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents dgvAbsensi As DataGridView
     Friend WithEvents btnAbsen As Button
     Friend WithEvents pnljmlhmtkl As Panel
     Friend WithEvents pnljmlhjdwl As Panel
-    Friend WithEvents jmlhMhs As PictureBox
+    Friend WithEvents jmlhMatkul As PictureBox
     Friend WithEvents jmlhJdwl As PictureBox
-    Friend WithEvents lblJmlhMhs As Label
     Friend WithEvents lblJmlhMatkul As Label
+    Friend WithEvents lblJmlhJadwal As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label8 As Label
     Friend WithEvents btnDelete As Button

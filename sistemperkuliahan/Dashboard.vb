@@ -3,11 +3,15 @@
 Public Class Dashboard
 
     Private ReadOnly token As String
+    Private ReadOnly username As String
     Private selectedCourseCode As String
 
-    Public Sub New(token As String)
+    Public Sub New(token As String, username As String)
         InitializeComponent()
         Me.token = token
+        Me.username = username
+
+        lblNama.Text = username
 
         dgvMatakuliah.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvJadwal.SelectionMode = DataGridViewSelectionMode.FullRowSelect
@@ -32,6 +36,7 @@ Public Class Dashboard
 
             ' Tampilkan di DataGridView
             dgvMatakuliah.DataSource = courses
+            lblJmlhMatkul.Text = courses.Count()
 
             ' Panggil API schedules
             url = "http://localhost:9090/api/v1/lecturer/schedules"
@@ -39,6 +44,7 @@ Public Class Dashboard
 
             ' Tampilkan di DataGridView
             dgvJadwal.DataSource = schedule
+            lblJmlhJadwal.Text = schedule.Count()
 
         Catch ex As Exception
             MessageBox.Show("Error saat memuat data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -63,9 +69,6 @@ Public Class Dashboard
 
         Catch ex As Exception
             btnAbsen.Enabled = False
-            MessageBox.Show("Error saat memuat data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-
         End Try
     End Sub
 
@@ -181,13 +184,16 @@ Public Class Dashboard
 
     Private Async Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim npm As String = dgvStudents.SelectedRows(0).Cells("Npm").Value
+        Await FetchAttendance(npm, Label6.Text)
+    End Sub
 
+    Public Async Function FetchAttendance(npm As String, courseCode As String) As Task
         Try
             ' Inisialisasi API Client
             Dim apiClient As New ApiClient()
 
             ' Panggil API students by course
-            Dim url As String = "http://localhost:9090/api/v1/lecturer/courses/" & Label6.Text & "/students/" & npm & "/attendances"
+            Dim url As String = "http://localhost:9090/api/v1/lecturer/courses/" & courseCode & "/students/" & npm & "/attendances"
             Dim absensi As List(Of AttendanceModel) = Await apiClient.GetDataAsync(Of List(Of AttendanceModel))(Me.token, url)
 
             ' Tampilkan di DataGridView
@@ -199,9 +205,9 @@ Public Class Dashboard
         Catch ex As Exception
             MessageBox.Show("Error saat memuat data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-    End Sub
+    End Function
 
-    Private Sub btnClosePnlAbsensi_Click(sender As Object, e As EventArgs) Handles btnClosePnlAbsensi.Click
+    Private Sub btnClosePnlAbsensi_Click(sender As Object, e As EventArgs)
         PnlAbsen.Hide()
         pnlCourseMhs.Show()
     End Sub
@@ -217,12 +223,18 @@ Public Class Dashboard
     End Function
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim formAbsenAdd As New FormAbsenAdd()
+        Dim npm As String = dgvStudents.SelectedRows(0).Cells("Npm").Value
+
+
+        Dim formAbsenAdd As New FormAbsenAdd(Me.selectedCourseCode, npm, Me.token, Me)
         formAbsenAdd.Show()
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        Dim formAbsenEdit As New FormAbsenEdit()
+        Dim npm As String = dgvStudents.SelectedRows(0).Cells("Npm").Value
+        Dim attendanceID As String = dgvAbsensi.SelectedRows(0).Cells("ID").Value
+
+        Dim formAbsenEdit As New FormAbsenEdit(attendanceID, Me.selectedCourseCode, npm, Me.token, Me)
         formAbsenEdit.Show()
     End Sub
 
@@ -234,7 +246,32 @@ Public Class Dashboard
         formNilai.Show()
     End Sub
 
-    Private Sub btnEditnilai_Click(sender As Object, e As EventArgs) Handles btnEditnilai.Click
-        'edit
+    Private Async Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Dim npm As String = dgvStudents.SelectedRows(0).Cells("Npm").Value
+        Dim attendanceID As String = dgvAbsensi.SelectedRows(0).Cells("ID").Value
+
+        ' Inisialisasi API Client
+        Dim apiClient As New ApiClient()
+
+        ' Panggil API courses
+        Dim url As String = $"http://localhost:9090/api/v1/lecturer/courses/{selectedCourseCode}/students/{npm}/attendances/{attendanceID}"
+        Await apiClient.DeleteDataAsync(Me.token, url)
+
+        Await FetchAttendance(npm, selectedCourseCode)
     End Sub
+
+    Private Async Sub btnDeletenilai_Click(sender As Object, e As EventArgs) Handles btnDeletenilai.Click
+        Dim npm As String = dgvStudents.SelectedRows(0).Cells("Npm").Value
+        Dim id As String = dgvStudentGrade.SelectedRows(0).Cells("ID").Value
+
+        ' Inisialisasi API Client
+        Dim apiClient As New ApiClient()
+
+        ' Panggil API courses
+        Dim url As String = $"http://localhost:9090/api/v1/lecturer/courses/{selectedCourseCode}/students/{npm}/grades/{id}"
+        Await apiClient.DeleteDataAsync(Me.token, url)
+
+        Await FetchGrade(npm, selectedCourseCode)
+    End Sub
+
 End Class

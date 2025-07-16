@@ -17,7 +17,7 @@
             MessageBox.Show("Login berhasil.", response.ToString)
             Me.Hide()
 
-            Dim dashboard As New Dashboard(response.data.token)
+            Dim dashboard As New Dashboard(response.data.token, model.Username)
             dashboard.Show()
 
         Catch ex As Exception

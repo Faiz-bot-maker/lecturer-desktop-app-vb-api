@@ -30,36 +30,41 @@ Partial Class FormAbsenAdd
         'cbStatus
         '
         Me.cbStatus.FormattingEnabled = True
-        Me.cbStatus.Location = New System.Drawing.Point(77, 47)
+        Me.cbStatus.Items.AddRange(New Object() {"Hadir", "Tidak Hadir"})
+        Me.cbStatus.Location = New System.Drawing.Point(103, 58)
+        Me.cbStatus.Margin = New System.Windows.Forms.Padding(4)
         Me.cbStatus.Name = "cbStatus"
-        Me.cbStatus.Size = New System.Drawing.Size(144, 21)
+        Me.cbStatus.Size = New System.Drawing.Size(191, 24)
         Me.cbStatus.TabIndex = 0
         '
         'cbSchedule
         '
         Me.cbSchedule.FormattingEnabled = True
-        Me.cbSchedule.Location = New System.Drawing.Point(77, 111)
+        Me.cbSchedule.Location = New System.Drawing.Point(103, 137)
+        Me.cbSchedule.Margin = New System.Windows.Forms.Padding(4)
         Me.cbSchedule.Name = "cbSchedule"
-        Me.cbSchedule.Size = New System.Drawing.Size(144, 21)
+        Me.cbSchedule.Size = New System.Drawing.Size(191, 24)
         Me.cbSchedule.TabIndex = 1
         '
         'btnSimpanAdd
         '
-        Me.btnSimpanAdd.Location = New System.Drawing.Point(98, 156)
+        Me.btnSimpanAdd.Location = New System.Drawing.Point(131, 192)
+        Me.btnSimpanAdd.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSimpanAdd.Name = "btnSimpanAdd"
-        Me.btnSimpanAdd.Size = New System.Drawing.Size(102, 27)
+        Me.btnSimpanAdd.Size = New System.Drawing.Size(136, 33)
         Me.btnSimpanAdd.TabIndex = 2
         Me.btnSimpanAdd.Text = "Simpan"
         Me.btnSimpanAdd.UseVisualStyleBackColor = True
         '
         'FormAbsenAdd
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(315, 225)
+        Me.ClientSize = New System.Drawing.Size(420, 277)
         Me.Controls.Add(Me.btnSimpanAdd)
         Me.Controls.Add(Me.cbSchedule)
         Me.Controls.Add(Me.cbStatus)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FormAbsenAdd"
         Me.Text = "FormAbsenAdd"
         Me.ResumeLayout(False)
