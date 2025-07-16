@@ -90,16 +90,16 @@
     <Compile Include="FormAbsenAdd.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAbsenEdit.Designer.vb">
-      <DependentUpon>FormAbsenEdit.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormAbsenEdit.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormNilai.Designer.vb">
       <DependentUpon>FormNilai.vb</DependentUpon>
     </Compile>
     <Compile Include="FormNilai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNilaiEdit.Designer.vb">
+      <DependentUpon>FormNilaiEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNilaiEdit.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.vb">
@@ -143,11 +143,11 @@
     <EmbeddedResource Include="FormAbsenAdd.resx">
       <DependentUpon>FormAbsenAdd.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAbsenEdit.resx">
-      <DependentUpon>FormAbsenEdit.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormNilai.resx">
       <DependentUpon>FormNilai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNilaiEdit.resx">
+      <DependentUpon>FormNilaiEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
@@ -189,6 +189,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\clock dhs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon book.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

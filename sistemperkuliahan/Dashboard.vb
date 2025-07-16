@@ -230,11 +230,11 @@ Public Class Dashboard
         formAbsenAdd.Show()
     End Sub
 
-    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) 
         Dim npm As String = dgvStudents.SelectedRows(0).Cells("Npm").Value
         Dim attendanceID As String = dgvAbsensi.SelectedRows(0).Cells("ID").Value
 
-        Dim formAbsenEdit As New FormAbsenEdit(attendanceID, Me.selectedCourseCode, npm, Me.token, Me)
+        Dim formAbsenEdit As New FormNilaiEdit(attendanceID, Me.selectedCourseCode, npm, Me.token, Me)
         formAbsenEdit.Show()
     End Sub
 
@@ -274,4 +274,7 @@ Public Class Dashboard
         Await FetchGrade(npm, selectedCourseCode)
     End Sub
 
+    Private Sub pnlDashboard_Paint(sender As Object, e As PaintEventArgs) Handles pnlDashboard.Paint
+
+    End Sub
 End Class

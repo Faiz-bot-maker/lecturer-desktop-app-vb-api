@@ -33,19 +33,17 @@ Partial Class FormNilai
         'tugas
         '
         Me.tugas.AutoSize = True
-        Me.tugas.Location = New System.Drawing.Point(293, 30)
-        Me.tugas.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.tugas.Location = New System.Drawing.Point(220, 24)
         Me.tugas.Name = "tugas"
-        Me.tugas.Size = New System.Drawing.Size(99, 16)
+        Me.tugas.Size = New System.Drawing.Size(80, 13)
         Me.tugas.TabIndex = 4
         Me.tugas.Text = "Masukkan Nilai"
         '
         'btnSimpannilai
         '
-        Me.btnSimpannilai.Location = New System.Drawing.Point(293, 116)
-        Me.btnSimpannilai.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSimpannilai.Location = New System.Drawing.Point(220, 94)
         Me.btnSimpannilai.Name = "btnSimpannilai"
-        Me.btnSimpannilai.Size = New System.Drawing.Size(113, 28)
+        Me.btnSimpannilai.Size = New System.Drawing.Size(85, 23)
         Me.btnSimpannilai.TabIndex = 9
         Me.btnSimpannilai.Text = "SIMPAN"
         Me.btnSimpannilai.UseVisualStyleBackColor = True
@@ -53,41 +51,40 @@ Partial Class FormNilai
         'cbNilai
         '
         Me.cbNilai.FormattingEnabled = True
-        Me.cbNilai.Location = New System.Drawing.Point(43, 53)
-        Me.cbNilai.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbNilai.Location = New System.Drawing.Point(32, 43)
         Me.cbNilai.Name = "cbNilai"
-        Me.cbNilai.Size = New System.Drawing.Size(160, 24)
+        Me.cbNilai.Size = New System.Drawing.Size(121, 21)
         Me.cbNilai.TabIndex = 8
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(39, 33)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(29, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(62, 16)
+        Me.Label1.Size = New System.Drawing.Size(49, 13)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Pilih Nilai"
         '
         'nudNilai
         '
-        Me.nudNilai.Location = New System.Drawing.Point(296, 55)
+        Me.nudNilai.Location = New System.Drawing.Point(222, 45)
+        Me.nudNilai.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.nudNilai.Name = "nudNilai"
-        Me.nudNilai.Size = New System.Drawing.Size(120, 22)
+        Me.nudNilai.Size = New System.Drawing.Size(90, 20)
         Me.nudNilai.TabIndex = 11
         '
         'FormNilai
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(481, 161)
+        Me.ClientSize = New System.Drawing.Size(361, 131)
         Me.Controls.Add(Me.nudNilai)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnSimpannilai)
         Me.Controls.Add(Me.cbNilai)
         Me.Controls.Add(Me.tugas)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FormNilai"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "FormNilai"
         CType(Me.nudNilai, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

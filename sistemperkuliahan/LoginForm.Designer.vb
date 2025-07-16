@@ -22,6 +22,7 @@ Partial Class LoginForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
@@ -29,96 +30,101 @@ Partial Class LoginForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.txtPassword)
         Me.Panel1.Controls.Add(Me.txtUsername)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Location = New System.Drawing.Point(344, 60)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Location = New System.Drawing.Point(258, 49)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(387, 389)
+        Me.Panel1.Size = New System.Drawing.Size(290, 316)
         Me.Panel1.TabIndex = 0
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(44, 230)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPassword.Location = New System.Drawing.Point(33, 187)
         Me.txtPassword.Multiline = True
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(312, 35)
+        Me.txtPassword.Size = New System.Drawing.Size(235, 29)
         Me.txtPassword.TabIndex = 4
         '
         'txtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(44, 155)
-        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtUsername.Location = New System.Drawing.Point(33, 126)
         Me.txtUsername.Multiline = True
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(312, 35)
+        Me.txtUsername.Size = New System.Drawing.Size(235, 29)
         Me.txtUsername.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(45, 210)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(34, 171)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 16)
+        Me.Label2.Size = New System.Drawing.Size(53, 13)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Password"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(45, 135)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(34, 110)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 16)
+        Me.Label1.Size = New System.Drawing.Size(55, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Username"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(123, 311)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Location = New System.Drawing.Point(92, 253)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(144, 62)
+        Me.Button1.Size = New System.Drawing.Size(108, 50)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "LOGIN"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(951, 15)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnExit.Location = New System.Drawing.Point(713, 12)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(100, 28)
+        Me.btnExit.Size = New System.Drawing.Size(75, 23)
         Me.btnExit.TabIndex = 1
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(105, 16)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(75, 79)
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
+        '
         'LoginForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "LoginForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "LoginForm"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -130,4 +136,5 @@ Partial Class LoginForm
     Friend WithEvents Label2 As Label
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents btnExit As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
