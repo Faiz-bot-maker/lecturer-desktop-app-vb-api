@@ -3,6 +3,7 @@
 Public Class Dashboard
 
     Private ReadOnly token As String
+    Private selectedCourseCode As String
 
     Public Sub New(token As String)
         InitializeComponent()
@@ -51,8 +52,6 @@ Public Class Dashboard
 
             Dim url As String = "http://localhost:9090/api/v1/lecturer/schedules/coming"
             Dim isUpcomingSchedule As Boolean = Await apiClient.GetDataAsync(Of Boolean)(Me.token, url)
-
-            MessageBox.Show("data: " & isUpcomingSchedule)
 
             If isUpcomingSchedule Then
                 btnAbsen.Text = "Absen"
@@ -122,6 +121,7 @@ Public Class Dashboard
 
         Dim code As String = dgvMatakuliah.SelectedRows(0).Cells("Code").Value
         Label6.Text = code
+        Me.selectedCourseCode = code
 
         Try
             ' Inisialisasi API Client
@@ -146,12 +146,16 @@ Public Class Dashboard
     Private Async Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim npm As String = dgvStudents.SelectedRows(0).Cells("Npm").Value
 
+        Await FetchGrade(npm, Label6.Text)
+    End Sub
+
+    Public Async Function FetchGrade(npm As String, courseCode As String) As Task
         Try
             ' Inisialisasi API Client
             Dim apiClient As New ApiClient()
 
             ' Panggil API students by course
-            Dim url As String = "http://localhost:9090/api/v1/lecturer/courses/" & Label6.Text & "/students/" & npm & "/grades"
+            Dim url As String = "http://localhost:9090/api/v1/lecturer/courses/" & courseCode & "/students/" & npm & "/grades"
             Dim grades As List(Of GradeModel) = Await apiClient.GetDataAsync(Of List(Of GradeModel))(Me.token, url)
 
             ' Tampilkan di DataGridView
@@ -163,7 +167,7 @@ Public Class Dashboard
         Catch ex As Exception
             MessageBox.Show("Error saat memuat data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-    End Sub
+    End Function
 
     Private Sub btnClosePnlNilai_Click(sender As Object, e As EventArgs)
         pnlNilai.Hide()
@@ -212,38 +216,6 @@ Public Class Dashboard
 
     End Function
 
-    Private Sub pnlDashboard_Paint(sender As Object, e As PaintEventArgs) Handles pnlDashboard.Paint
-
-    End Sub
-
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-
-    End Sub
-
-    Private Sub pnljmlhmtkl_Paint(sender As Object, e As PaintEventArgs) Handles pnljmlhmtkl.Paint
-
-    End Sub
-
-    Private Sub jmlhMhs_Click(sender As Object, e As EventArgs) Handles jmlhMhs.Click
-
-    End Sub
-
-    Private Sub lblJmlhMhs_Click(sender As Object, e As EventArgs) Handles lblJmlhMhs.Click
-
-    End Sub
-
-    Private Sub pnljmlhjdwl_Paint(sender As Object, e As PaintEventArgs) Handles pnljmlhjdwl.Paint
-
-    End Sub
-
-    Private Sub jmlhJdwl_Click(sender As Object, e As EventArgs) Handles jmlhJdwl.Click
-
-    End Sub
-
-    Private Sub lblJmlhMatkul_Click(sender As Object, e As EventArgs) Handles lblJmlhMatkul.Click
-
-    End Sub
-
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim formAbsenAdd As New FormAbsenAdd()
         formAbsenAdd.Show()
@@ -255,12 +227,14 @@ Public Class Dashboard
     End Sub
 
     Private Sub btnAddnilai_Click(sender As Object, e As EventArgs) Handles btnAddnilai.Click
-        Dim formNilai As New FormNilai()
+        Dim npm As String = dgvStudents.SelectedRows(0).Cells("Npm").Value
+
+
+        Dim formNilai As New FormNilai(Me.selectedCourseCode, npm, Me.token, Me)
         formNilai.Show()
     End Sub
 
     Private Sub btnEditnilai_Click(sender As Object, e As EventArgs) Handles btnEditnilai.Click
-        Dim formNilai As New FormNilai()
-        formNilai.Show()
+        'edit
     End Sub
 End Class

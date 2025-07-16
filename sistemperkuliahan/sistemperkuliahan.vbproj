@@ -111,6 +111,8 @@
     <Compile Include="model\ApiModel.vb" />
     <Compile Include="model\AttendanceModel.vb" />
     <Compile Include="model\CourseModel.vb" />
+    <Compile Include="model\GradeComponent.vb" />
+    <Compile Include="model\GradeCreateModel.vb" />
     <Compile Include="model\GradeModel.vb" />
     <Compile Include="model\LoginModel.vb" />
     <Compile Include="model\ScheduleModel.vb" />
